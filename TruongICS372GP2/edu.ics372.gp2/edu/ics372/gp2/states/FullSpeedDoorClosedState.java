@@ -28,7 +28,7 @@ public class FullSpeedDoorClosedState extends TrainState {
 	 * Process station reached request
 	 */
 	@Override
-	public void onStationReachedRequest() {
+	public void onStationReachingRequest() {
 		TrainContext.getInstance().changeState(DecelerateDoorClosedState.getInstance());
 	}
 

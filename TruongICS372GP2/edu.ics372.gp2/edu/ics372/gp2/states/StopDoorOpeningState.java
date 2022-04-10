@@ -43,7 +43,7 @@ public class StopDoorOpeningState extends TrainState implements Notifiable {
 		if (isReopen()) {
 			TrainContext.getInstance().changeState(StopDoorOpenedState.getInstance(8));
 		} else {
-			TrainContext.getInstance().changeState(StopDoorOpenedState.getInstance(10));
+			TrainContext.getInstance().changeState(StopDoorOpenedState.getInstance(30));
 		}
 	}
 
