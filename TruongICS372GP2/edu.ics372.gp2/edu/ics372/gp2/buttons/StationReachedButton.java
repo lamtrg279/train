@@ -4,9 +4,12 @@ import edu.ics372.gp2.states.TrainContext;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+/**
+ * The button for station reached request
+ */
 public class StationReachedButton extends GUIButton implements EventHandler<ActionEvent> {
 	/**
-	 * The button for cooking
+	 * The button for station reached request
 	 * 
 	 * @param string
 	 */

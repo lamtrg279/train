@@ -1,5 +1,8 @@
 package edu.ics372.gp2.states;
 
+/**
+ * Represents the decelerate door closed state
+ */
 public class DecelerateDoorClosedState extends TrainState {
 	private static DecelerateDoorClosedState instance;
 
@@ -21,12 +24,18 @@ public class DecelerateDoorClosedState extends TrainState {
 		return instance;
 	}
 
+	/**
+	 * Process station reached request
+	 */
 	@Override
 	public void onStationReachedRequest() {
 		boolean arrived = true;
 		TrainContext.getInstance().changeState(StopDoorClosedState.getInstance(1, arrived));
 	}
 
+	/**
+	 * Initializes the state. Adds itself as a listener
+	 */
 	@Override
 	public void enter() {
 		TrainContext.getInstance().showDecelerate();

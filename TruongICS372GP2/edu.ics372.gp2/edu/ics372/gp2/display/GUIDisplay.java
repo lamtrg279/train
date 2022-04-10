@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
- * GUI to implement the MicrowaveDisplay interface A pretty elementary interface
+ * GUI to implement the TrainDisplay interface A pretty elementary interface
  *
  */
 public class GUIDisplay extends Application implements TrainDisplay {
@@ -55,42 +55,63 @@ public class GUIDisplay extends Application implements TrainDisplay {
 		});
 	}
 
+	/**
+	 * Indicate the train accelerates and doors closed
+	 */
 	@Override
 	public void showAccelerate(int time) {
 		trainStatus.setText("Train accelerates for " + time + " seconds");
 		doorStatus.setText("Doors closed");
 	}
 
+	/**
+	 * Indicate the train decelerates and doors closed
+	 */
 	@Override
 	public void showDecelerate() {
 		trainStatus.setText("Train decelerates");
 		doorStatus.setText("Doors closed");
 	}
 
+	/**
+	 * Indicate the train at full speed and doors closed
+	 */
 	@Override
 	public void showFullSpeed() {
 		trainStatus.setText("Train at full speed");
 		doorStatus.setText("Doors closed");
 	}
 
+	/**
+	 * Indicate the train stopped and doors closed
+	 */
 	@Override
 	public void showStopDoorsClosed() {
 		trainStatus.setText("Train stopped");
 		doorStatus.setText("Doors closed");
 	}
 
+	/**
+	 * Indicate the train stopped and doors opening
+	 */
 	@Override
 	public void showStopDoorsOpening(int time) {
 		trainStatus.setText("Train stopped");
 		doorStatus.setText("Doors opening (Elapsed time " + time + "s)");
 	}
 
+	/**
+	 * Indicate the train stopped and doors opened
+	 */
 	@Override
 	public void showStopDoorsOpened(int time) {
 		trainStatus.setText("Train stopped");
 		doorStatus.setText("Doors opened (Elapsed time " + time + "s)");
 	}
 
+	/**
+	 * Indicate the train stopped and doors closing
+	 */
 	@Override
 	public void showStopDoorsClosing(int time) {
 		trainStatus.setText("Train stopped");

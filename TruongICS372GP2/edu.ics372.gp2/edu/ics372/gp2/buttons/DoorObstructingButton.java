@@ -4,9 +4,12 @@ import edu.ics372.gp2.states.TrainContext;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+/**
+ * The button for door obstructing
+ */
 public class DoorObstructingButton extends GUIButton implements EventHandler<ActionEvent> {
 	/**
-	 * The button for cooking
+	 * The button for door obstructing
 	 * 
 	 * @param string
 	 */

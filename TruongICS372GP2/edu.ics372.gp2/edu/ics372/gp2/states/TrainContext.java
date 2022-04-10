@@ -61,42 +61,87 @@ public class TrainContext {
 		currentState.enter();
 	}
 
+	/**
+	 * Process station reaching request
+	 */
 	public void onStationReachingRequest() {
 		currentState.onStationReachingRequest();
 	}
 
+	/**
+	 * Process station reached request
+	 */
 	public void onStationReachedRequest() {
 		currentState.onStationReachedRequest();
 	}
 
+	/**
+	 * Process door obstructing request
+	 */
 	public void onDoorObstructingRequest() {
 		currentState.onDoorObstructingRequest();
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 * 
+	 * @param time time left
+	 */
 	public void showAccelerate(int time) {
 		display.showAccelerate(time);
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 */
 	public void showDecelerate() {
 		display.showDecelerate();
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 */
 	public void showFullSpeed() {
 		display.showFullSpeed();
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 */
 	public void showStopDoorsClosed() {
 		display.showStopDoorsClosed();
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 * 
+	 * @param time time left
+	 */
 	public void showStopDoorsOpening(int time) {
 		display.showStopDoorsOpening(time);
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 * 
+	 * @param time time left
+	 */
 	public void showStopDoorsOpened(int time) {
 		display.showStopDoorsOpened(time);
 	}
 
+	/**
+	 * This invokes the right method of the display. This helps protect the states
+	 * from changes to the way the system utilizes the state changes.
+	 * 
+	 * @param time time left
+	 */
 	public void showStopDoorsClosing(int time) {
 		display.showStopDoorsClosing(time);
 	}

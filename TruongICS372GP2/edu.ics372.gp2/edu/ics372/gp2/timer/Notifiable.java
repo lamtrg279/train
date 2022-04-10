@@ -1,4 +1,4 @@
-package edu.ics372.timer;
+package edu.ics372.gp2.timer;
 
 /**
  * An entity that can be notified of timing events

@@ -1,5 +1,8 @@
 package edu.ics372.gp2.states;
 
+/**
+ * Represents the full speed door closed state
+ */
 public class FullSpeedDoorClosedState extends TrainState {
 	private static FullSpeedDoorClosedState instance;
 
@@ -21,11 +24,17 @@ public class FullSpeedDoorClosedState extends TrainState {
 		return instance;
 	}
 
+	/**
+	 * Process station reached request
+	 */
 	@Override
 	public void onStationReachedRequest() {
 		TrainContext.getInstance().changeState(DecelerateDoorClosedState.getInstance());
 	}
 
+	/**
+	 * Initializes state. Adds itself as listener
+	 */
 	@Override
 	public void enter() {
 		TrainContext.getInstance().showFullSpeed();

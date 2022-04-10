@@ -1,4 +1,4 @@
-package edu.ics372.timer;
+package edu.ics372.gp2.timer;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

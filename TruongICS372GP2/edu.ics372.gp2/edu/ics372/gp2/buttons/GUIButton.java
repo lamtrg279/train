@@ -15,10 +15,8 @@ public abstract class GUIButton extends Button implements EventHandler<ActionEve
 	 * 
 	 * @param string the text
 	 */
-
 	public GUIButton(String string) {
 		super(string);
 		setOnAction(this);
 	}
-
 }

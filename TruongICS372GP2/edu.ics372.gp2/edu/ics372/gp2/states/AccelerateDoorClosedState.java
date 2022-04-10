@@ -1,8 +1,11 @@
 package edu.ics372.gp2.states;
 
-import edu.ics372.timer.Notifiable;
-import edu.ics372.timer.Timer;
+import edu.ics372.gp2.timer.Notifiable;
+import edu.ics372.gp2.timer.Timer;
 
+/**
+ * Represents the accelerate door closed state
+ */
 public class AccelerateDoorClosedState extends TrainState implements Notifiable {
 	private static AccelerateDoorClosedState instance;
 	private Timer timer;

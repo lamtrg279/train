@@ -1,8 +1,11 @@
 package edu.ics372.gp2.states;
 
-import edu.ics372.timer.Notifiable;
-import edu.ics372.timer.Timer;
+import edu.ics372.gp2.timer.Notifiable;
+import edu.ics372.gp2.timer.Timer;
 
+/**
+ * Represents train stop door closed state
+ */
 public class StopDoorClosedState extends TrainState implements Notifiable {
 	private static StopDoorClosedState instance;
 	private Timer timer;
@@ -18,6 +21,8 @@ public class StopDoorClosedState extends TrainState implements Notifiable {
 	/**
 	 * For singleton
 	 * 
+	 * @param second  second remaining
+	 * @param arrived train arrived or depart
 	 * @return the object
 	 */
 	public static StopDoorClosedState getInstance(int second, boolean arrived) {
