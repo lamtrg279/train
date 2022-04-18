@@ -30,7 +30,7 @@ public class StopDoorClosingState extends TrainState implements Notifiable {
 
 	@Override
 	public void onDoorObstructingRequest() {
-		int remainingTimer = (5 - timer.getTimeValue()) * 4 / 5;
+		int remainingTimer = (5 - timer.getTimeValue() + 1) * 4 / 5;
 		TrainContext.getInstance().changeState(StopDoorOpeningState.getInstance(remainingTimer, true));
 	}
 
