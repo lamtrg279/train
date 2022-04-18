@@ -30,7 +30,6 @@ public class DecelerateDoorClosedState extends TrainState {
 	@Override
 	public void onStationReachedRequest() {
 		boolean arrived = true;
-		TrainContext.getInstance().changeState(StopDoorClosedState.getInstance(1, arrived));
 	}
 
 	/**
@@ -39,6 +38,7 @@ public class DecelerateDoorClosedState extends TrainState {
 	@Override
 	public void enter() {
 		TrainContext.getInstance().showDecelerate();
+		TrainContext.getInstance().changeState(StopDoorClosedBeforeArriveState.getInstance());
 	}
 
 	@Override
