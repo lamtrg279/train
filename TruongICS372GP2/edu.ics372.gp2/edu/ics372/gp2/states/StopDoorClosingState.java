@@ -42,7 +42,8 @@ public class StopDoorClosingState extends TrainState implements Notifiable {
 	@Override
 	public void OnTimerRunsOut() {
 		TrainContext.getInstance().showStopDoorsClosed();
-		TrainContext.getInstance().changeState(StopDoorClosedState.getInstance(3, false));
+		TrainContext.getInstance().changeState(StopDoorClosedAfterArriveState.getInstance());
+
 	}
 
 	@Override
